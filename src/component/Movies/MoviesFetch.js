@@ -9,32 +9,7 @@ const MoviesFetch = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const user = useSelector((state) => state.isAuth.username);
-  //   console.log(user);
-
-  //   const fetchMovies = () => {
-
-  //       fetch('https://reactnative.dev/movies.json');
-  //       setIsLoading(true);
-  //       console.log('fetching')
-  //       if (!response.ok) {
-  //           throw new Error('Something went wrong!');
-  //         }
-
-  //         const data = await response.json();
-
-  //         const fetchedMovies = data.results.map((movieData) => {
-  //             return {
-  //                 id: movieData.episode_id,
-  //                 title: movieData.title,
-  //                 openingText: movieData.opening_crawl,
-  //                 releaseDate: movieData.release_date,
-  //             };
-  //         });
-  //         setMovies(fetchedMovies)
-  //         setIsLoading(false);
-  //         console.log('fetching');
-  //     }
-
+  
   useEffect(() => {
     setIsLoading(true);
     fetch("https://reactnative.dev/movies.json")
@@ -51,7 +26,6 @@ const MoviesFetch = () => {
         });
         setMovies(fetchedMovies);
         setIsLoading(false);
-        console.log("*** moviesFetch useEffect fetchedMovies");
       });
   }, []);
 
