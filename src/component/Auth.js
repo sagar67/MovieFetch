@@ -26,19 +26,15 @@ const Auth = () => {
   };
 
   const loginHandler = () => {
-    if (
-      enteredPassword.trim().length < 6
-    ) {
+    if (enteredPassword.trim().length < 6) {
       return alert("Password should be more than 6");
     }
-    if (
-      enteredUsername.trim().length < 10
-    ) {
+    if (enteredUsername.trim().length < 10) {
       return alert("Entered less than 10 digits number");
     }
 
-  dispatch(authActions.isLogin());
-  dispatch(authActions.username(enteredUsername))
+    dispatch(authActions.isLogin());
+    dispatch(authActions.username(enteredUsername));
   };
 
   return (
@@ -49,16 +45,18 @@ const Auth = () => {
           <div className={classes.control}>
             <label htmlFor="mobile">Enter Username(Mobile No.)</label>
           </div>
-          <select>
+          <div className={classes.user}>
+          <select className={classes.select}>
             <option>+91</option>
           </select>
-          <input
-            type="tel"
-            id="mobile"
-            placeholder="Enter 10 digit no."
-            value={enteredUsername}
-            onChange={usernameHandler}
-          />
+            <input
+              type="tel"
+              id="mobile"
+              placeholder="Enter 10 digit no."
+              value={enteredUsername}
+              onChange={usernameHandler}
+            />
+          </div>
           <div className={classes.control}>
             <label htmlFor="enterpassword">Password</label>
             <input

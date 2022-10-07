@@ -23,12 +23,26 @@
   font-weight: bold;
 }
 
+.select {
+  padding: 0.30rem;
+}
+
+.user input {
+  padding: 00.50rem;
+  display: inline-block;
+  margin: auto;
+  width: 16rem;
+  border-radius: 4px;
+  padding: 0.50rem;
+  border: 1px solid #ccc;
+}
+
 .control input {
   display: block;
   width: 20rem;
   margin: auto;
   border-radius: 4px;
-  padding: 0.25rem;
+  padding: 0.50rem;
   border: 1px solid #ccc;
 }
 
