@@ -3,9 +3,7 @@ import Auth from "./component/Auth";
 import { useSelector } from "react-redux";
 import MoviesFetch from "./component/Movies/MoviesFetch";
 import { Redirect, Route, Switch } from "react-router-dom";
-// import SingleMovieDetail from "./component/Movies/SingleMovieDetail";
 import MovieDetails from "./component/Movies/MovieDetails";
-// import MovieDetails from "./component/Movies/MovieDetails";
 
 function App() {
 
