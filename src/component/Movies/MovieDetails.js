@@ -57,20 +57,6 @@ const MovieDetails = () => {
     <Card>
       <img src={movieDetail.poster} alt='No Poster Found!!!'/>
       <h3>{movieDetail.description}</h3>
-
-      {/* <ul> */}
-        {/* {DUMMY_DATA.map((movie) => {
-          console.log("*** MovieDetails inside movie ", movie);
-          return (
-            <SingleMovieDetail
-              key={movieDetail.id}
-              id={movieDetail}
-              poster={movieDetail.poster}
-              description={movieDetail.description}
-              />
-              );
-            })} */}
-      {/* </ul> */}
     </Card>
 </>
   );
