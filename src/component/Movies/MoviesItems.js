@@ -4,7 +4,6 @@ import Card from "../UI/Card";
 import Button from "../UI/Button";
 
 function MoviesItems(props) {
-  console.log("*** MoviesItems props", props);
 
   return (
     <Card>
@@ -14,7 +13,6 @@ function MoviesItems(props) {
       </div>
       <div>
         <Link to={`/moviesfetch/${props.id}`}>
-          {/* <button >View</button> */}
           <Button>View</Button>
         </Link>
       </div>
