@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { authActions } from "../store/auth";
 import classes from "./Auth.module.css";
-// import MoviesList from "./Movies/MoviesList";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
@@ -9,10 +8,7 @@ const Auth = () => {
   const [enteredUsername, setEnteredUsername] = useState("");
   const [enteredPassword, setEnteredPassword] = useState("");
 
-  // const [movies,setMovies] = useState([]);
-
   const dispatch = useDispatch();
-  // const isAuth = useSelector(state => state.isAuth.isAuthenticated)
 
   const usernameHandler = (event) => {
     setEnteredUsername(event.target.value);
@@ -31,35 +27,17 @@ const Auth = () => {
 
   const loginHandler = () => {
     if (
-      // enteredPassword.trim().length === 0 ||
       enteredPassword.trim().length < 6
-      // !enteredPassword.trim().includes('')
     ) {
       return alert("Password should be more than 6");
     }
     if (
-      // enteredUsername.trim().length === 0 ||
       enteredUsername.trim().length < 10
     ) {
       return alert("Entered less than 10 digits number");
     }
 
-    dispatch(authActions.isLogin());
-    // console.log(enteredUsername, enteredPassword);
-
-    // fetch('https://reactnative.dev/movies.json').then(response => {
-    //     return response.json();
-    //   }).then(data => {
-    //     const fetchedMovies = data.movies.map((movieData) => {
-    //         return {
-    //             id: movieData.id,
-    //             title: movieData.title,
-    //             releaseYear: movieData.releaseYear
-    //         };
-    //     });
-    //     setMovies(fetchedMovies);
-    //     console.log('fetched')
-    //   })
+  dispatch(authActions.isLogin());
   dispatch(authActions.username(enteredUsername))
   };
 
@@ -99,7 +77,6 @@ const Auth = () => {
             </Link>
           </div>
         </form>
-        {/* <MoviesList movies={movies}/> */}
       </section>
     </main>
   );
